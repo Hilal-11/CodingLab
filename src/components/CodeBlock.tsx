@@ -1,12 +1,17 @@
 import { CodeEditor } from '@/components/ui/shadcn-io/code-editor';
 import { Code } from 'lucide-react';
-import { div } from 'motion/react-client';
-export const CodeBlock = () => {
+
+type CodeBlockProps = {
+  height?: number | string;
+};
+
+export const CodeBlock = ({ height = "200px" }: CodeBlockProps) => {
   return (
     <div className=' w-full h-auto overflow-hidden'>
       <CodeEditor
       cursor
-      className=" w-full lg:w-full h-[480px] overflow-hidden z-50"
+      style={{ height }}
+      className="bg-neutral-100 dark:bg-neutral-900 w-full lg:w-full overflow-hidden z-50"
       lang="cpp"
       title="SudokuSolver.cpp"
       icon={<Code />}
