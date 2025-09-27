@@ -6,15 +6,15 @@ function Hero() {
     <div>
       <div
           className={cn(
-            "absolute inset-0",
-            "[background-size:40px_40px]",
+            "h-[600px] md:h-[750px] absolute inset-0 border",
+            "[background-size:34px_34px]",
             "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
             "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
           )}
         />
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+        <div className="h-[800px] pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-neutral-950"></div>
 
-      <div className='lg:pt-36 pt-20 px-4 md:px-8 w-full flex justify-center items-center'>
+      <div className=' lg:pt-36 pt-20 px-4 md:px-8 w-full flex justify-center items-center'>
         <div className='w-full z-40 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 justify-between'>
             <div className='flex flex-col items-center '>
                 <h1 className='text-neutral-700 dark:text-neutral-200 lg:px-4 lg:text-5xl md:text-4xl lg:text-left text-center leading-tight text-3xl font-bold font-sans'>Solve problems, practice interviews, and rise to the top with our problem-solving platform.</h1> <br />
@@ -25,7 +25,7 @@ function Hero() {
                 </div>
             </div>
              <div className='z-40'>
-                <CodeBlock /> 
+                <CodeBlock height="460px" /> 
             </div>
         </div>
       </div>  
