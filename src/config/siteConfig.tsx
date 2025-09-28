@@ -13,6 +13,18 @@ export const siteConfig : SiteConfig[] = [
 ]
 
 
+interface SiteConfigWithoutAuth {
+    id: string | number,
+    name: string,
+    path: string
+}
+export const siteConfigWithoutAuth : SiteConfigWithoutAuth[] = [
+  { "id": 1, "name": "Platform", "path": "/platform" },
+  { "id": 2, "name": "Explore", "path": "/explore" },
+  { "id": 3, "name": "Signup", "path": "/signup" },
+  { "id": 4, "name": "Login", "path": "/login" }
+]
+
 interface PlatfromForWhichConfig {
   id: string | number
   forWhich: string
