@@ -4,6 +4,8 @@ import Container from '@/components/Container'
 import Hero from '@/components/Hero'
 import LandingPageBodySecession from '@/components/LandingPageBodySecession'
 import MainSection from '@/components/MainSection'
+import FAQ from '@/components/FAQ'
+import LastSecession from '@/components/LastSecession'
 function page() {
   return (
      <div>
@@ -12,6 +14,8 @@ function page() {
         <Hero /> <br />
         <MainSection />
         <LandingPageBodySecession />
+        <FAQ />
+        <LastSecession />
       </Container>
       <br /><br /><br /><br />
      </div>
