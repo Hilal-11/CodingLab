@@ -40,7 +40,7 @@ const  Signup = async () => {
             <div className="mt-4">
                 <Label className="text-sm font-medium pb-1" htmlFor="email">Email</Label>
                 <Input id="email" name="email" type="email" required placeholder="johndoe@example.com" />
-            </div>
+            </div> 
             <div className="mt-4">
                 <Label className="text-sm font-medium pb-1" htmlFor="password">Password</Label>
                 <Input id="password" name="password" type="password" required placeholder="••••••••" />
