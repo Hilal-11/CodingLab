@@ -13,7 +13,7 @@ function Header() {
       <div className='z-50 fixed top-0 flex justify-between w-full items-center lg:container mx-auto lg:bg-transparent bg-neutral-100 lg:dark:bg-transparent dark:bg-neutral-950'>
         <div className='px-4 flex w-full py-4 items-center justify-start space-x-20'>
           <div>
-            <h1 className='text-xl font-sans'>Deadlock</h1>
+            <h1 className='text-xl font-sans'>Brain Fuck</h1>
           </div>
           <div className='hidden lg:flex'>
             <ul className='flex space-x-4'>
