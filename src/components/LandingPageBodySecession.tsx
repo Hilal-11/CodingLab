@@ -22,7 +22,7 @@ function LandingPageBodySecession() {
                  <div key={platfromForWhichConfig[0].id} className='px-4 lg:px-14'>
                     <div className='text-center flex gap-2 items-center'>
                         <h1 className='text-center text-6xl text-orange-600'><PiStudentFill /></h1>
-                        <h1 className='text-4xl font-medium font-sans'>{platfromForWhichConfig[0].forWhich}</h1>
+                        <h1 className='text-3xl font-medium font-sans'>{platfromForWhichConfig[0].forWhich}</h1>
                     </div>
                     <div className='py-1'>
                         <span className='text-xs fira-code-one bg-neutral-950 dark:bg-neutral-100 dark:text-black px-4 py-[2px] rounded-full text-white'>{platfromForWhichConfig[0].heading}</span>
@@ -37,8 +37,8 @@ function LandingPageBodySecession() {
         <br />
         <div className='w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 justify-between'>
                 <div className='flex items-center '>
-                   <video
-                        src="@/assets/video1.mp4"
+                   {/* <video
+                        src="/"
                         autoPlay
                         loop
                         muted
@@ -46,12 +46,12 @@ function LandingPageBodySecession() {
                         controls
                         className="w-full rounded-xl h-[430px]"
                         >
-                    </video>
+                    </video> */}
                 </div>
                  <div key={platfromForWhichConfig[1].id} className='px-4 lg:px-14'>
                     <div className='text-center flex gap-2 items-center'>
                         <h1 className='text-center text-6xl text-orange-600'><PiStudentFill /></h1>
-                        <h1 className='text-4xl font-medium font-sans'>{platfromForWhichConfig[1].forWhich}</h1>
+                        <h1 className='text-3xl font-medium font-sans'>{platfromForWhichConfig[1].forWhich}</h1>
                     </div>
                     <div className='py-1'>
                         <span className='text-xs fira-code-one bg-neutral-950 dark:bg-neutral-100 dark:text-black px-4 py-[2px] rounded-full text-white'>{platfromForWhichConfig[0].heading}</span>
@@ -67,7 +67,7 @@ function LandingPageBodySecession() {
                  <div key={platfromForWhichConfig[2].id} className='px-4 lg:px-14'>
                     <div className='text-center flex gap-2 items-center'>
                         <h1 className='text-center text-6xl text-orange-600'><PiStudentFill /></h1>
-                        <h1 className='text-4xl font-medium font-sans'>{platfromForWhichConfig[2].forWhich}</h1>
+                        <h1 className='text-3xl font-medium font-sans'>{platfromForWhichConfig[2].forWhich}</h1>
                     </div>
                     <div className='py-1'>
                         <span className='text-xs fira-code-one bg-neutral-950 dark:bg-neutral-100 dark:text-black px-4 py-[2px] rounded-full text-white'>{platfromForWhichConfig[0].heading}</span>
@@ -76,8 +76,8 @@ function LandingPageBodySecession() {
                     </div>
                 </div>
                  <div className='flex items-center '>
-                    <video
-                        src='@/assets/video2.mp4'
+                    {/* <video
+                        src=''
                         autoPlay
                         loop
                         playsInline
@@ -85,7 +85,7 @@ function LandingPageBodySecession() {
                         controls
                         className="w-full rounded-xl h-[430px]"
                         >
-                    </video>
+                    </video> */}
                 </div>
 
         </div>
