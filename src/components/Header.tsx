@@ -8,6 +8,7 @@ import { siteConfigWithoutAuth } from "@/config/siteConfig"
 import Link from 'next/link';
 import ThemeSwitcher from './ThemeSwitcher';
 function Header() {
+
   const [isOpen , setIsOpen] = useState(false);
   const [isAuthenticated , setIsAuthenticated ] = useState(false)
   return (
