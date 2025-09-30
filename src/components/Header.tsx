@@ -10,13 +10,13 @@ import ThemeSwitcher from './ThemeSwitcher';
 function Header() {
 
   const [isOpen , setIsOpen] = useState(false);
-  const [isAuthenticated , setIsAuthenticated ] = useState(false)
+  const [isAuthenticated , setIsAuthenticated ] = useState(true)
   return (
     <div className='flex justify-center relative w-full border-b-1  mx-auto'>
-      <div className='z-50 fixed top-0 flex justify-between w-full items-center lg:container mx-auto lg:bg-transparent bg-neutral-100 lg:dark:bg-transparent dark:bg-neutral-950'>
-        <div className='px-4 flex w-full py-4 items-center justify-start space-x-20'>
+      <div className='z-50 fixed top-0 flex justify-between w-full items-center  mx-auto bg-neutral-50 dark:bg-neutral-950 my-1 rounded-md'>
+        <div className='w-[90%] mx-auto px-4 flex py-4 items-center justify-start space-x-20'>
           <div>
-            <h1 className='text-xl font-sans'>Brain Fuck</h1>
+            <h1 className='text-xl font-sans'>{`Algo's`}</h1>
           </div>
           <div className='hidden lg:flex'>
             { 
