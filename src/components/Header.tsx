@@ -13,7 +13,7 @@ function Header() {
   const [isAuthenticated , setIsAuthenticated ] = useState(true)
   return (
     <div className='flex justify-center relative w-full border-b-1  mx-auto'>
-      <div className='z-50 fixed top-0 flex justify-between w-full items-center  mx-auto bg-neutral-50 dark:bg-neutral-950 my-1 rounded-md'>
+      <div className='z-50 fixed top-0 flex justify-between w-full items-center  mx-auto  my-1 rounded-md bg-white/30 dark:bg-black/30 backdrop-blur-sm lg:border-1'>
         <div className='w-[90%] mx-auto px-4 flex py-4 items-center justify-start space-x-20'>
           <div>
             <h1 className='text-xl font-sans'>{`Algo's`}</h1>
@@ -61,7 +61,7 @@ function Header() {
           isOpen && <div className='bg-neutral-200 dark:bg-neutral-900 lg:hidden absolute inset-0 left-0 w-full h-screen'>
             <div className='flex justify-between items-center py-2 px-4 border h-[60px] bg-white dark:bg-neutral-950'>
               <div>
-                <h1 className='text-xl font-sans'>Brain Fuck</h1>
+                <h1 className='text-xl font-sans'>{`Algo's`}</h1>
               </div>
               <button className='lg:hidden text-xl bg-white dark:bg-neutral-900 border py-2 px-2 rounded-2xl shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]' onClick={() => setIsOpen(false)}><IoMdClose /></button>
             </div>
