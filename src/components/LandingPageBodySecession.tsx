@@ -33,20 +33,19 @@ function LandingPageBodySecession() {
                 <div className='flex items-center '>
                     <CodeBlock height = "380px"/>
                 </div>
-        </div>
-        <br />
-        <div className='w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 justify-between'>
-                <div className='flex items-center '>
-                   {/* <video
-                        src="/"
+        </div> <br />
+
+        <div className='w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 justify-between '>
+                <div className='flex items-center rounded-xl'>
+                   <video
+                        src='https://res.cloudinary.com/dou5rypdf/video/upload/v1759504045/video1_vrojbx.mp4'
                         autoPlay
                         loop
-                        muted
                         playsInline
-                        controls
-                        className="w-full rounded-xl h-[430px]"
+                        muted
+                        className="rounded-xl w-full h-auto"
                         >
-                    </video> */}
+                    </video>
                 </div>
                  <div key={platfromForWhichConfig[1].id} className='px-4 lg:px-14'>
                     <div className='text-center flex gap-2 items-center'>
@@ -60,7 +59,7 @@ function LandingPageBodySecession() {
                     </div>
                 </div>
 
-        </div>
+        </div> <br />
 
         <div className='w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 justify-between'>
                
@@ -75,17 +74,16 @@ function LandingPageBodySecession() {
                         <button className='my-6 font-sans px-10 py-2 rounded-md bg-neutral-900 text-neutral-100 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>Get Start</button>
                     </div>
                 </div>
-                 <div className='flex items-center '>
-                    {/* <video
-                        src=''
+                 <div className='flex items-center rounded-xl'>
+                    <video
+                        src='https://res.cloudinary.com/dou5rypdf/video/upload/v1759503998/video2_ud7f6m.mp4'
                         autoPlay
                         loop
                         playsInline
                         muted
-                        controls
-                        className="w-full rounded-xl h-[430px]"
+                        className="w-full rounded-xl h-auto"
                         >
-                    </video> */}
+                    </video>
                 </div>
 
         </div>
