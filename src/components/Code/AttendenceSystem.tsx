@@ -27,7 +27,7 @@ function AttendenceSystem() {
 
 
   return <div className="w-full h-auto mx-auto flex justify-center items-center">
-      <div className="flex justify-center items-center mt-2 bg-neutral-100 dark:bg-neutral-800 py-1 px-2 mx-auto rounded-sm w-full md:px-8">
+      <div className="flex justify-center items-center bg-neutral-100 dark:bg-neutral-800 py-5 px-2 mx-auto w-full md:px-8">
         <ActivityCalendar
           fontSize={13}
           blockMargin={4}
