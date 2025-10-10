@@ -1,0 +1,72 @@
+interface CompaniesProblemTags {
+    id: string | number
+    company: string
+    total_problems: string | number
+}
+export const companiesProblemTags:CompaniesProblemTags[] = [
+  { "id": 1, "company": "Meta", "total_problems": 1318 },
+  { "id": 2, "company": "Google", "total_problems": 2137 },
+  { "id": 3, "company": "Uber", "total_problems": 453 },
+  { "id": 4, "company": "Bloomberg", "total_problems": 1127 },
+  { "id": 5, "company": "Amazon", "total_problems": 1890 },
+  { "id": 6, "company": "Microsoft", "total_problems": 1282 },
+  { "id": 7, "company": "Apple", "total_problems": 485 },
+  { "id": 8, "company": "Oracle", "total_problems": 324 },
+  { "id": 9, "company": "TikTok", "total_problems": 439 },
+  { "id": 10, "company": "Adobe", "total_problems": 401 },
+  { "id": 11, "company": "LinkedIn", "total_problems": 176 },
+  { "id": 12, "company": "Citadel", "total_problems": 102 },
+  { "id": 13, "company": "Atlassian", "total_problems": 63 },
+  { "id": 14, "company": "Salesforce", "total_problems": 195 },
+  { "id": 15, "company": "IBM", "total_problems": 157 },
+  { "id": 16, "company": "DoorDash", "total_problems": 87 },
+  { "id": 17, "company": "Goldman Sachs", "total_problems": 286 },
+  { "id": 18, "company": "Nvidia", "total_problems": 135 },
+  { "id": 19, "company": "J.P. Morgan", "total_problems": 84 },
+  { "id": 20, "company": "Snowflake", "total_problems": 100 },
+  { "id": 21, "company": "Paypal", "total_problems": 142 },
+  { "id": 22, "company": "Spotify", "total_problems": 121 },
+  { "id": 23, "company": "Twitter", "total_problems": 178 },
+  { "id": 24, "company": "ServiceNow", "total_problems": 96 },
+  { "id": 25, "company": "Morgan Stanley", "total_problems": 112 },
+  { "id": 26, "company": "Square", "total_problems": 88 },
+  { "id": 27, "company": "Twilio", "total_problems": 74 },
+  { "id": 28, "company": "Yelp", "total_problems": 103 },
+  { "id": 29, "company": "Tesla", "total_problems": 91 },
+  { "id": 30, "company": "Expedia", "total_problems": 69 },
+  { "id": 31, "company": "Airbnb", "total_problems": 147 },
+  { "id": 32, "company": "Reddit", "total_problems": 82 },
+  { "id": 33, "company": "Zillow", "total_problems": 73 },
+  { "id": 34, "company": "eBay", "total_problems": 118 },
+  { "id": 35, "company": "Pinterest", "total_problems": 94 },
+  { "id": 36, "company": "Instacart", "total_problems": 79 },
+  { "id": 37, "company": "Robinhood", "total_problems": 65 },
+  { "id": 38, "company": "Coinbase", "total_problems": 77 },
+  { "id": 39, "company": "SAP", "total_problems": 83 },
+  { "id": 40, "company": "Dell", "total_problems": 71 },
+   { "id": 41, "company": "Siemens", "total_problems": 68 },
+  { "id": 42, "company": "Cisco", "total_problems": 122 },
+  { "id": 43, "company": "HP", "total_problems": 75 },
+  { "id": 44, "company": "Intel", "total_problems": 134 },
+  { "id": 45, "company": "Qualcomm", "total_problems": 109 },
+  { "id": 46, "company": "SAP Labs", "total_problems": 58 },
+  { "id": 47, "company": "Epic Systems", "total_problems": 81 },
+  { "id": 48, "company": "Zoom", "total_problems": 64 },
+  { "id": 49, "company": "Slack", "total_problems": 72 },
+  { "id": 50, "company": "Cloudflare", "total_problems": 101 },
+  { "id": 51, "company": "Stripe", "total_problems": 156 },
+  { "id": 52, "company": "Shopify", "total_problems": 115 },
+  { "id": 53, "company": "Dropbox", "total_problems": 92 },
+  { "id": 54, "company": "DigitalOcean", "total_problems": 67 },
+  { "id": 55, "company": "Netflix", "total_problems": 149 },
+  { "id": 56, "company": "HCL", "total_problems": 61 },
+  { "id": 57, "company": "Infosys", "total_problems": 73 },
+  { "id": 58, "company": "TCS", "total_problems": 85 },
+  { "id": 59, "company": "Wipro", "total_problems": 69 },
+  { "id": 60, "company": "Accenture", "total_problems": 104 }
+]
+
+
+
+
+
