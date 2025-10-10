@@ -3,7 +3,6 @@
 import * as React from "react"
 
 import { Calendar } from "@/components/ui/calendar"
-import { Label } from "@/components/ui/label"
 
 
 function Calendar1() {

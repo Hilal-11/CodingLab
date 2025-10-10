@@ -29,10 +29,18 @@ function Problems() {
   return (
     <div className='mx-auto' >
         <Header />
-        <div className='py-16 main-container h-auto grid grid-cols-1 lg:grid-cols-6'>
+        <div className='py-16 main-container md:h-svh h-[100%] grid grid-cols-1 lg:grid-cols-6'>
 
     
-            <div className='pb-20 hidden lg:block h-[100%] bg-neutral-100 dark:bg-neutral-900 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] border-r-1'>
+            <div className='hidden pb-20 h-svh bg-neutral-100 dark:bg-neutral-900 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] border-r-1 relative lg:grid lg:grid-rows-3 gap-1 px-2 '>
+
+              <div className='rounded-xl bg-neutral-100 dark:bg-neutral-800 row-span-2 mt-2 w-full h-fullshadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] p-2'>
+                
+              </div>
+
+              <div className='rounded-xl bg-neutral-100 dark:bg-neutral-800 mt-2 w-full h-full  shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] flex justify-center items-center p-4'>
+                <h2 className='text-2xl font-sans font-medium text-neutral-700'>Graph View</h2>
+              </div>
 
             </div>
 
@@ -98,10 +106,7 @@ function Problems() {
                               }`}>{question.difficulty.toLocaleLowerCase()}</p>
                             {
                               favorite ? (<span onClick={() => setFavorite(!favorite)} className=' cursor-pointer inline-block p-2 bg-neutral-200 dark:bg-neutral-800 rounded-full font-sans text-xl font-medium text-neutral-800 dark:text-neutral-200 '><FaStar /></span>) : (<span onClick={() => setFavorite(!favorite)} className=' cursor-pointer inline-block p-2 bg-neutral-200 dark:bg-neutral-800 rounded-full font-sans text-xl font-medium text-neutral-800 dark:text-neutral-200 '><HiOutlineStar /></span>)
-                            }
-
-                            
-                                      
+                            }       
                           </div>
                         </div>
                         
@@ -111,7 +116,7 @@ function Problems() {
               </div>
             </div>
 
-            <div className="pb-20 hidden h-auto  lg:flex flex-col gap-2 z-20 bg-neutral-100 dark:bg-neutral-900    shadow-   [0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+            <div className="pb-20 hidden h-auto  lg:flex flex-col gap-2 z-20 bg-neutral-100 dark:bg-neutral-900  shadow-   [0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
               <div className='p-2'>
                 <Calendar1 />
               </div>
