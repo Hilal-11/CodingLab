@@ -5,7 +5,7 @@ import { IconBrandGoogleFilled  , IconBrandGithubFilled   } from "@tabler/icons-
 import { cn } from "@/lib/utils";
 import Link from "next/link"
 
-const  Signup = async () => {
+const Register = async () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 w-full px-2">
 
@@ -36,6 +36,8 @@ const  Signup = async () => {
                     <Input id="last-name" name="last-name" type="text" required placeholder="Doe"/>
                 </div>
             </div>
+
+
             
             <div className="mt-4">
                 <Label className="text-sm font-medium pb-1" htmlFor="email">Email</Label>
@@ -43,6 +45,11 @@ const  Signup = async () => {
             </div> 
             <div className="mt-4">
                 <Label className="text-sm font-medium pb-1" htmlFor="password">Password</Label>
+                <Input id="password" name="password" type="password" required placeholder="••••••••" />
+            </div>
+            
+            <div className="mt-4">
+                <Label className="text-sm font-medium pb-1" htmlFor="password">Conform Password</Label>
                 <Input id="password" name="password" type="password" required placeholder="••••••••" />
             </div>
 
@@ -63,4 +70,4 @@ const  Signup = async () => {
   )
 }
 
-export default Signup
+export default Register
