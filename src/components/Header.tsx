@@ -5,18 +5,19 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { siteConfig } from "@/config/siteConfig"
 import { siteConfigWithoutAuth } from "@/config/siteConfig"
-import Link from 'next/link';
 import ThemeSwitcher from './ThemeSwitcher';
+import { SiCodeigniter } from "react-icons/si";
+import Link from 'next/link';
 function Header() {
 
   const [isOpen , setIsOpen] = useState(false);
-  const [isAuthenticated , setIsAuthenticated ] = useState(true)
+  const [isAuthenticated , setIsAuthenticated ] = useState(false)
   return (
     <div className='flex justify-center relative w-full border-b-1  mx-auto'>
       <div className='z-50 fixed top-0 flex justify-between w-full items-center  mx-auto  my-1 rounded-md bg-white/30 dark:bg-black/30 backdrop-blur-sm lg:border-1'>
         <div className='w-[90%] mx-auto px-4 flex py-4 items-center justify-start space-x-20'>
           <div>
-            <h1 className='text-xl font-sans'>{`Algo's`}</h1>
+            <Link href={'/'}><SiCodeigniter className="inline-block text-3xl linear-gradient(90deg, hsla(33,100%,53%,1) 0%, hsla(58,100%,68%,1) 100%) ext-transparent bg-clip-text t " /></Link>
           </div>
           <div className='hidden lg:flex'>
             { 
