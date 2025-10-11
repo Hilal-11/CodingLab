@@ -22,7 +22,7 @@ interface SiteConfigWithoutAuth {
 export const siteConfigWithoutAuth : SiteConfigWithoutAuth[] = [
   { "id": 1, "name": "Platform", "path": "/platform" },
   { "id": 2, "name": "Explore", "path": "/explore" },
-  { "id": 3, "name": "Signup", "path": "/signup" },
+  { "id": 3, "name": "Register", "path": "/register" },
   { "id": 4, "name": "Login", "path": "/login" }
 ]
 
