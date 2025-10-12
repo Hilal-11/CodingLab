@@ -11,7 +11,7 @@ import Link from 'next/link';
 function Header() {
 
   const [isOpen , setIsOpen] = useState(false);
-  const [isAuthenticated , setIsAuthenticated ] = useState(false)
+  const [isAuthenticated , setIsAuthenticated ] = useState(true)
   return (
     <div className='flex justify-center relative w-full border-b-1  mx-auto'>
       <div className='z-50 fixed top-0 flex justify-between w-full items-center  mx-auto  my-1 rounded-md bg-white/30 dark:bg-black/30 backdrop-blur-sm lg:border-1'>

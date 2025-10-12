@@ -14,7 +14,7 @@ const loginSchema = z.object({
     z.string().min(3, "username is required")
   ),
   email: z.preprocess(
-    (v) => typeof v === 'string' ? v.trim() : v,
+    (v) => typeof v === 'string' ? z.trim() : v,
     z.string().regex(/^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i, "Invalid email address")
   ),
   password: z.string().min(8, "Password must be at least 8 characters")
