@@ -1,11 +1,66 @@
+"use client"
+import { useState , useEffect, FormEvent, ChangeEvent, InputEventHandler } from "react"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { IconBrandGoogleFilled  , IconBrandGithubFilled   } from "@tabler/icons-react"
 import { cn } from "@/lib/utils";
+import { z } from 'zod'
 
-const  Login = async () => {
+const loginSchema = z.object({
+  username: z.preprocess(
+    (v) => typeof v === 'string' ? v.trim() : v,
+    z.string().min(3, "username is required")
+  ),
+  email: z.preprocess(
+    (v) => typeof v === 'string' ? v.trim() : v,
+    z.string().regex(/^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i, "Invalid email address")
+  ),
+  password: z.string().min(8, "Password must be at least 8 characters")
+})
+
+const  Login = () => {
+
+  const [errors, setErrors] = useState<Record<string, string>>({})
+
+  const [loginFormData , setLoginFormData] = useState({
+    username: "",
+    email: "",
+    password: "" 
+  })
+
+  const onChangeFormHandler = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name , value } = event.target;
+    setLoginFormData({...loginFormData,  [name]: value})
+  }
+  const formSubmitHandler = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    setErrors({});
+
+
+    const parse = loginSchema.safeParse(loginFormData);
+    if(!parse.success) {
+      const fieldErrors: Record<string, string> = {};
+      for (const issue of parse.error.issues) {
+        const key = issue.path[0] ?? "form";
+        fieldErrors[String(key)] = issue.message;
+      }
+      setErrors(fieldErrors)
+      return;
+    }
+
+    const ValidData = parse.data;
+    console.log(ValidData)
+
+    // POST Request to send the data----for login on Backend
+    setLoginFormData({
+      username: "",
+      email: "",
+      password: "" 
+    })
+  }
+  
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 px-2 w-full">
 
@@ -28,21 +83,24 @@ const  Login = async () => {
       
       
       rounded-lg">
-        <form>
+        <form onSubmit={formSubmitHandler}>
             <h1 className="text-4xl font-bold text-center">Login</h1>
             <p className="text-sm text-center text-muted-foreground pb-8 py-2">Login to your account</p>
 
             <div className="mt-4">
                 <Label className="text-sm font-medium pb-1" htmlFor="username">Username</Label>
-                <Input id="username" name="username" type="text" required placeholder="johndoe"/>
+                <Input onChange={onChangeFormHandler} value={loginFormData.username} id="username" name="username" type="text" placeholder="johndoe"/>
+                <div className='text-red-600 font-sans font-bold px-1 text-[12px] py-1 '>{errors.username}</div>
             </div>
             <div className="mt-4">
                 <Label className="text-sm font-medium pb-1" htmlFor="email">Email</Label>
-                <Input id="email" name="email" type="email" required placeholder="johndoe@example.com"/>
+                <Input onChange={onChangeFormHandler} value={loginFormData.email} id="email" name="email" type="email" placeholder="johndoe@example.com"/>
+                <div className='text-red-600 font-sans font-bold px-1 text-[12px] py-1 '>{errors.email}</div>
             </div>
             <div className="mt-4">
                 <Label className="text-sm font-medium pb-1" htmlFor="password">Password</Label>
-                <Input id="password" name="password" type="password" required placeholder="••••••••"/>
+                <Input onChange={onChangeFormHandler} value={loginFormData.password} id="password" name="password" type="password" placeholder="••••••••"/>
+                <div className='text-red-600 font-sans font-bold px-1 text-[12px] py-1 '>{errors.password}</div>
             </div>
 
             <div className="mt-6">
