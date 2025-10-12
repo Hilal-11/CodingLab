@@ -1,15 +1,83 @@
+"use client"
+import React, { useState , useEffect } from 'react'
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { IconBrandGoogleFilled  , IconBrandGithubFilled   } from "@tabler/icons-react"
 import { cn } from "@/lib/utils";
 import Link from "next/link"
+import { z } from 'zod'
 
-const Register = async () => {
+
+const registerSchema = z.object({
+  firstname: z.preprocess(
+    (v) => typeof v === 'string' ? v.trim(): v,
+    z.string().min(3, "Firstname is required")
+  ),
+  lastname: z.preprocess(
+    (v) => typeof v === 'string' ? v.trim(): v,
+    z.string().min(3, "Last name is required")
+  ),
+  email: z.preprocess(
+    (v) => typeof v === 'string' ? v.trim().toLowerCase(): v,
+    z.string().regex(/^(?!\.)(?!.*\.\.)([a-z0-9_'+\-\.]*)[a-z0-9_+-]@([a-z0-9][a-z0-9\-]*\.)+[a-z]{2,}$/i, "Invalid email address")
+  ),
+  password: z.string().min(8, "Password must be at least 8 characters"),
+  conformPassword: z.string().min(8, "Password must be at least 8 characters")
+}).refine((data) => data.password === data.conformPassword, {
+  path: ["conformPassword"],
+  message: "Passwords do not match",
+});
+
+
+const Register = () => {
+
+
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  
+  const [registerFormData , setRegisterFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+    conformPassword: "",
+  })  
+  
+  const onChangeFormHandler = (event:React.ChangeEvent<HTMLInputElement>) => {
+    const { name , value } = event.target;
+    setRegisterFormData({ ...registerFormData , [name]: value})
+  }
+
+
+  const handleFormSubmition = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    setErrors({});
+
+    const parse = registerSchema.safeParse(registerFormData)
+    if(!parse.success) {
+      const fieldErrors: Record<string, string> = {};
+      for (const issue of parse.error.issues) {
+        const key = issue.path[0] ?? "form";
+        fieldErrors[String(key)] = issue.message;
+      }
+      setErrors(fieldErrors)
+      return;
+    }
+    // POST Request to send the data----for registration on Backend
+    const ValidData = parse.data;
+    console.log(ValidData)
+
+    setRegisterFormData({
+      firstname: "",
+      lastname: "",
+      email: "",
+      password: "",
+      conformPassword: "",
+    })
+  }
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 w-full px-2">
-
-
 
     <div
               className={cn(
@@ -23,17 +91,33 @@ const Register = async () => {
     
 
       <div className="z-50 bg-white dark:bg-neutral-900 w-auto md:w-[460px] h-auto p-6 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] rounded-lg">
-        <form>
+        <form onSubmit={handleFormSubmition}>
             <h1 className="text-4xl font-bold text-center">Signup</h1>
             <p className="text-sm text-center text-muted-foreground pb-8 py-2">Create an account to get started</p>
             <div className="flex gap-1 w-full">
                 <div className="w-1/2">
                     <Label className="text-sm font-medium pb-1" htmlFor="first-name">First Name</Label>
-                    <Input id="first-name" name="first-name" type="text" required placeholder="John" />
+                    <Input 
+                      id="firstname"
+                      name="firstname"
+                      type="text"
+                      onChange={onChangeFormHandler}
+                      value={registerFormData.firstname}
+                       
+                      placeholder="John" />
+                      <div className='text-red-600 font-sans font-bold px-1 text-[12px] py-1 '>{errors.firstname}</div>
                 </div>
                 <div className="w-1/2">
                     <Label className="text-sm font-medium pb-1" htmlFor="last-name">Last Name</Label>
-                    <Input id="last-name" name="last-name" type="text" required placeholder="Doe"/>
+                    <Input 
+                      id="lastname" 
+                      name="lastname" 
+                      type="text" 
+                      onChange={onChangeFormHandler}
+                      value={registerFormData.lastname}
+                       
+                      placeholder="Doe"/>
+                      <div className='text-red-600 font-sans font-bold px-1 text-[12px] py-1 '>{errors.lastname}</div>
                 </div>
             </div>
 
@@ -41,16 +125,37 @@ const Register = async () => {
             
             <div className="mt-4">
                 <Label className="text-sm font-medium pb-1" htmlFor="email">Email</Label>
-                <Input id="email" name="email" type="email" required placeholder="johndoe@example.com" />
+                <Input 
+                  id="email"
+                  name="email" 
+                  type="email"
+                  onChange={onChangeFormHandler}
+                  value={registerFormData.email}
+                   placeholder="johndoe@example.com" />
+                  <div className='text-red-600 font-sans font-bold px-1 text-[12px] py-1 '>{errors.email}</div>
             </div> 
             <div className="mt-4">
                 <Label className="text-sm font-medium pb-1" htmlFor="password">Password</Label>
-                <Input id="password" name="password" type="password" required placeholder="••••••••" />
+                <Input 
+                  id="password"
+                  name="password" 
+                  type="password" 
+                  onChange={onChangeFormHandler}
+                  value={registerFormData.password}
+                   placeholder="••••••••" />
+                  <div className='text-red-600 font-sans font-bold px-1 text-[12px] py-1 '>{errors.password}</div>
             </div>
             
             <div className="mt-4">
                 <Label className="text-sm font-medium pb-1" htmlFor="password">Conform Password</Label>
-                <Input id="password" name="password" type="password" required placeholder="••••••••" />
+                <Input 
+                  id="conformPassword" 
+                  name="conformPassword" 
+                  type="password"
+                  onChange={onChangeFormHandler}
+                  value={registerFormData.conformPassword}
+                   placeholder="••••••••" />
+                  <div className='text-red-600 font-sans font-bold px-1 text-[12px] py-1 '>{errors.conformPassword}</div>
             </div>
 
             <div className="mt-6">
