@@ -1,13 +1,18 @@
 
 "use client"
+import dynamic from "next/dynamic"
 import React from 'react'
 import Header from '@/components/Header'
 import Container from '@/components/Container'
 import Hero from '@/components/Hero'
-import LandingPageBodySecession from '@/components/LandingPageBodySecession'
-import MainSection from '@/components/MainSection'
-import FAQ from '@/components/FAQ'
-import LastSecession from '@/components/LastSecession'
+
+// dynamic(() => import('@/components/Code/AttendenceSystem'), { ssr: false })
+
+const LandingPageBodySecession = dynamic(() => import('@/components/LandingPageBodySecession'), { ssr: false })
+const MainSection=  dynamic(() => import('@/components/MainSection'), {ssr: false})
+const FAQ = dynamic(() => import('@/components/FAQ'), { ssr: false })
+const LastSecession=  dynamic(() => import('@/components/LastSecession'), { ssr: false })
+
 function page() {
 
   return (
