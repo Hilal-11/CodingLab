@@ -40,7 +40,7 @@ function MainSection() {
 
             </div>
         </div>
-        <div className=' w-full grid grid-cols-1 lg:grid-cols-2 py-5 gap-4'>
+        <div className=' w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-5 gap-4'>
                 <div className='bg-white w-full pb-6 pt-6 items-center justify-center dark:bg-neutral-900 rounded-2xl shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] '>
                 <div className='px-6 lg:px-10'>
                     <MdTrackChanges className='text-4xl lg:text-6xl text-orange-600' />
