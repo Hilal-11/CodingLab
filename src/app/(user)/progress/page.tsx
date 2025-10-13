@@ -1,4 +1,5 @@
-import AttendenceSystem from '@/components/Code/AttendenceSystem'
+import dynamic from 'next/dynamic'
+const AttendenceSystem = dynamic(() => import('@/components/Code/AttendenceSystem'))
 import Header from '@/components/Header'
 import React from 'react'
 
