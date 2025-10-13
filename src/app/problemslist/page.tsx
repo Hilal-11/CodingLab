@@ -1,8 +1,16 @@
 "use client"
-import AttendenceSystem from '@/components/Code/AttendenceSystem'
-import ProblemTopicLists from '@/components/Code/ProblemTopicLists'
-import Header from '@/components/Header'
 import React, { useState } from 'react'
+import dynamic from "next/dynamic"
+
+
+const AttendenceSystem = dynamic(() => import('@/components/Code/AttendenceSystem'), { ssr: false })
+const ProblemTopicLists = dynamic(() => import('@/components/Code/ProblemTopicLists'), { ssr: false })
+const GraphView = dynamic(() => import('@/components/Code/GraphView'), { ssr: false })
+const CompanyPremiumProblemsTags = dynamic(() => import('@/components/Code/CompanyPremiumProblemsTags'), { ssr: false })
+const Calendar1 = dynamic(() => import('@/components/Code/Calendar'), { ssr: false })
+
+import Header from '@/components/Header'
+
 import { IoMdSearch } from "react-icons/io";
 import { CiFilter } from "react-icons/ci";
 import { RiProgress2Line } from "react-icons/ri";
@@ -13,20 +21,15 @@ import { LuClipboardPenLine } from "react-icons/lu";
 import { FaStar } from "react-icons/fa";
 import { HiOutlineStar } from "react-icons/hi2";
 import { problemsDataList } from '@/config/platformConfig/ProblemsList'
-
 import { FcCheckmark } from "react-icons/fc";
 import { IoClipboardOutline } from "react-icons/io5";
-import Calendar1 from '@/components/Code/Calendar'
-import CompanyPremiumProblemsTags from '@/components/Code/CompanyPremiumProblemsTags'
 import { BsBuildings } from "react-icons/bs";
 import { MdDateRange } from "react-icons/md";
 import { FiSidebar } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
-
 import { BiLogoGraphql } from "react-icons/bi";
 import { IoChevronUpSharp } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import GraphView from '@/components/Code/GraphView'
 
 function Problemslist() {
 
