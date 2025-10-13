@@ -6,7 +6,7 @@ interface SiteConfig {
 export const siteConfig : SiteConfig[] = [
   { "id": 1, "name": "Explore", "path": "/" },
   { "id": 2, "name": "Problems", "path": "/problemslist" },
-  { "id": 33, "name": "Track Progress", "path": "/user/progress" },
+  { "id": 33, "name": "Track Progress", "path": "/progress" },
   { "id": 10, "name": "Building", "path": "/dev" },
   { "id": 3, "name": "Contest", "path": "/contest" },
   { "id": 5, "name": "Interview", "path": "/interview" },

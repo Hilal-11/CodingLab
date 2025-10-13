@@ -8,10 +8,10 @@ import Hero from '@/components/Hero'
 
 // dynamic(() => import('@/components/Code/AttendenceSystem'), { ssr: false })
 
-const LandingPageBodySecession = dynamic(() => import('@/components/LandingPageBodySecession'), { ssr: false })
-const MainSection=  dynamic(() => import('@/components/MainSection'), {ssr: false})
-const FAQ = dynamic(() => import('@/components/FAQ'), { ssr: false })
-const LastSecession=  dynamic(() => import('@/components/LastSecession'), { ssr: false })
+const LandingPageBodySecession = dynamic(() => import('@/components/LandingPageBodySecession'), { ssr: true })
+const MainSection=  dynamic(() => import('@/components/MainSection'), {ssr: true})
+const FAQ = dynamic(() => import('@/components/FAQ'), { ssr: true })
+const LastSecession=  dynamic(() => import('@/components/LastSecession'), { ssr: true })
 
 function page() {
 

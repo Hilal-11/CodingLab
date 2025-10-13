@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 import dynamic from "next/dynamic"
 
 
-const AttendenceSystem = dynamic(() => import('@/components/Code/AttendenceSystem'), { ssr: false })
-const ProblemTopicLists = dynamic(() => import('@/components/Code/ProblemTopicLists'), { ssr: false })
-const GraphView = dynamic(() => import('@/components/Code/GraphView'), { ssr: false })
-const CompanyPremiumProblemsTags = dynamic(() => import('@/components/Code/CompanyPremiumProblemsTags'), { ssr: false })
-const Calendar1 = dynamic(() => import('@/components/Code/Calendar'), { ssr: false })
+const AttendenceSystem = dynamic(() => import('@/components/Code/AttendenceSystem'), { ssr: true })
+const ProblemTopicLists = dynamic(() => import('@/components/Code/ProblemTopicLists'), { ssr: true })
+const GraphView = dynamic(() => import('@/components/Code/GraphView'), { ssr: true })
+const CompanyPremiumProblemsTags = dynamic(() => import('@/components/Code/CompanyPremiumProblemsTags'), { ssr: true })
+const Calendar1 = dynamic(() => import('@/components/Code/Calendar'), { ssr: true })
 
 import Header from '@/components/Header'
 

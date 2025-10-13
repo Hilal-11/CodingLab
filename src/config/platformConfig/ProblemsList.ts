@@ -36,6 +36,251 @@ export const problemsDataList = [{
                     "acRate": 0.5797861024924243,
                     "contestPoint": null,
                     "__typename": "ProblemSetQuestionNode"
+                },{
+                    "difficulty": "EASY",
+                    "id": 501,
+                    "paidOnly": false,
+                    "questionFrontendId": "501",
+                    "status": "TO_DO",
+                    "title": "Find Mode in Binary Search Tree",
+                    "titleSlug": "find-mode-in-binary-search-tree",
+                    "topicTags": [
+                        {
+                            "name": "Tree",
+                            "slug": "tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Depth-First Search",
+                            "slug": "depth-first-search",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Search Tree",
+                            "slug": "binary-search-tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Tree",
+                            "slug": "binary-tree",
+                            "__typename": "CommonTagNode"
+                        }
+                    ],
+                    "frequency": null,
+                    "isInMyFavorites": false,
+                    "acRate": 0.5797861024924243,
+                    "contestPoint": null,
+                    "__typename": "ProblemSetQuestionNode"
+                },{
+                    "difficulty": "EASY",
+                    "id": 501,
+                    "paidOnly": false,
+                    "questionFrontendId": "501",
+                    "status": "TO_DO",
+                    "title": "Find Mode in Binary Search Tree",
+                    "titleSlug": "find-mode-in-binary-search-tree",
+                    "topicTags": [
+                        {
+                            "name": "Tree",
+                            "slug": "tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Depth-First Search",
+                            "slug": "depth-first-search",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Search Tree",
+                            "slug": "binary-search-tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Tree",
+                            "slug": "binary-tree",
+                            "__typename": "CommonTagNode"
+                        }
+                    ],
+                    "frequency": null,
+                    "isInMyFavorites": false,
+                    "acRate": 0.5797861024924243,
+                    "contestPoint": null,
+                    "__typename": "ProblemSetQuestionNode"
+                },{
+                    "difficulty": "EASY",
+                    "id": 501,
+                    "paidOnly": false,
+                    "questionFrontendId": "501",
+                    "status": "TO_DO",
+                    "title": "Find Mode in Binary Search Tree",
+                    "titleSlug": "find-mode-in-binary-search-tree",
+                    "topicTags": [
+                        {
+                            "name": "Tree",
+                            "slug": "tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Depth-First Search",
+                            "slug": "depth-first-search",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Search Tree",
+                            "slug": "binary-search-tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Tree",
+                            "slug": "binary-tree",
+                            "__typename": "CommonTagNode"
+                        }
+                    ],
+                    "frequency": null,
+                    "isInMyFavorites": false,
+                    "acRate": 0.5797861024924243,
+                    "contestPoint": null,
+                    "__typename": "ProblemSetQuestionNode"
+                },{
+                    "difficulty": "EASY",
+                    "id": 501,
+                    "paidOnly": false,
+                    "questionFrontendId": "501",
+                    "status": "TO_DO",
+                    "title": "Find Mode in Binary Search Tree",
+                    "titleSlug": "find-mode-in-binary-search-tree",
+                    "topicTags": [
+                        {
+                            "name": "Tree",
+                            "slug": "tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Depth-First Search",
+                            "slug": "depth-first-search",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Search Tree",
+                            "slug": "binary-search-tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Tree",
+                            "slug": "binary-tree",
+                            "__typename": "CommonTagNode"
+                        }
+                    ],
+                    "frequency": null,
+                    "isInMyFavorites": false,
+                    "acRate": 0.5797861024924243,
+                    "contestPoint": null,
+                    "__typename": "ProblemSetQuestionNode"
+                },{
+                    "difficulty": "EASY",
+                    "id": 501,
+                    "paidOnly": false,
+                    "questionFrontendId": "501",
+                    "status": "TO_DO",
+                    "title": "Find Mode in Binary Search Tree",
+                    "titleSlug": "find-mode-in-binary-search-tree",
+                    "topicTags": [
+                        {
+                            "name": "Tree",
+                            "slug": "tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Depth-First Search",
+                            "slug": "depth-first-search",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Search Tree",
+                            "slug": "binary-search-tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Tree",
+                            "slug": "binary-tree",
+                            "__typename": "CommonTagNode"
+                        }
+                    ],
+                    "frequency": null,
+                    "isInMyFavorites": false,
+                    "acRate": 0.5797861024924243,
+                    "contestPoint": null,
+                    "__typename": "ProblemSetQuestionNode"
+                },{
+                    "difficulty": "EASY",
+                    "id": 501,
+                    "paidOnly": false,
+                    "questionFrontendId": "501",
+                    "status": "TO_DO",
+                    "title": "Find Mode in Binary Search Tree",
+                    "titleSlug": "find-mode-in-binary-search-tree",
+                    "topicTags": [
+                        {
+                            "name": "Tree",
+                            "slug": "tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Depth-First Search",
+                            "slug": "depth-first-search",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Search Tree",
+                            "slug": "binary-search-tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Tree",
+                            "slug": "binary-tree",
+                            "__typename": "CommonTagNode"
+                        }
+                    ],
+                    "frequency": null,
+                    "isInMyFavorites": false,
+                    "acRate": 0.5797861024924243,
+                    "contestPoint": null,
+                    "__typename": "ProblemSetQuestionNode"
+                },{
+                    "difficulty": "EASY",
+                    "id": 501,
+                    "paidOnly": false,
+                    "questionFrontendId": "501",
+                    "status": "TO_DO",
+                    "title": "Find Mode in Binary Search Tree",
+                    "titleSlug": "find-mode-in-binary-search-tree",
+                    "topicTags": [
+                        {
+                            "name": "Tree",
+                            "slug": "tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Depth-First Search",
+                            "slug": "depth-first-search",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Search Tree",
+                            "slug": "binary-search-tree",
+                            "__typename": "CommonTagNode"
+                        },
+                        {
+                            "name": "Binary Tree",
+                            "slug": "binary-tree",
+                            "__typename": "CommonTagNode"
+                        }
+                    ],
+                    "frequency": null,
+                    "isInMyFavorites": false,
+                    "acRate": 0.5797861024924243,
+                    "contestPoint": null,
+                    "__typename": "ProblemSetQuestionNode"
                 },
                 {
                     "difficulty": "HARD",
