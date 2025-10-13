@@ -25,7 +25,7 @@ function Header() {
                 <ul className='flex space-x-4'>
                   {
                     siteConfig.map((item) => (
-                      <Link className='font-sans' key={item.id} href={item.path}>{item.name}</Link>
+                      <Link prefetch={true} className='font-sans' key={item.id} href={item.path}>{item.name}</Link>
                     ))
                   }
                 </ul>
@@ -33,7 +33,7 @@ function Header() {
                 <ul className='flex space-x-4'>
                   {
                     siteConfigWithoutAuth.map((item) => (
-                      <Link className='font-sans' key={item.id} href={item.path}>{item.name}</Link>
+                      <Link prefetch={true} className='font-sans' key={item.id} href={item.path}>{item.name}</Link>
                     ))
                   }
                 </ul>
