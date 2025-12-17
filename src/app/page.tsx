@@ -10,8 +10,8 @@ import Hero from '@/components/Hero'
 
 const LandingPageBodySecession = dynamic(() => import('@/components/LandingPageBodySecession'), { ssr: true })
 const MainSection=  dynamic(() => import('@/components/MainSection'), {ssr: true})
-const FAQ = dynamic(() => import('@/components/FAQ'), { ssr: true })
-const LastSecession=  dynamic(() => import('@/components/LastSecession'), { ssr: true })
+const FAQ = dynamic(() => import('@/components/FAQ'), { ssr: false })
+const LastSecession=  dynamic(() => import('@/components/LastSecession'), { ssr: false })
 
 function page() {
 
